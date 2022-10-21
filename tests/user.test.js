@@ -104,7 +104,7 @@ describe('Get users',() => {
   });
   it('return 404 status when the user does not exist', () =>{
     return request(app)
-    .get('.api/users//4')
+    .get('api/users/4')
     .expect(404)
     .then((response)=> {
       expect({
@@ -143,7 +143,7 @@ describe('Update the users', () => {
     .send({
       oldEmail: "harshit@gmail.com",
       email: "harshit2@gmail.com",
-      name: "Harshit",
+      name: "",
       passcode: "2524",
       userType: "customer"
     })
